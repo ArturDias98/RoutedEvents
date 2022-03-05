@@ -4,9 +4,49 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Toolbar_ItemsControl"
+        xmlns:toolbar="clr-namespace:Toolbar_ItemsControl.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        x:Name="Main"
+        Width="500"
+        Height="300"
+        Title="MainWindow" >
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5"/>
+        </Grid.RowDefinitions>
+        <DockPanel             
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Grid.Column="1">
+            <TextBlock 
+                Text="{Binding LeftValue, ElementName=Main}" 
+                Margin="10"
+                Background="LightGray"
+                FontSize="45"
+               />
+            <TextBlock 
+                Margin="10"
+                Background="LightGray"
+                FontSize="45"
+                Text="{Binding RigthValue, ElementName=Main}" 
+                />
+        </DockPanel>
+        <toolbar:ToolBarControl 
+            Grid.Column="1" 
+            Grid.Row="2" 
+            UpClick="ToolBarControl_UpClick"   
+            DownClick="ToolBarControl_DownClick"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            NumItems="2"/>
     </Grid>
 </Window>

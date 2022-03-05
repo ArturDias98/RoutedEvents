@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Toolbar_ItemsControl.Controls"
              Background="White"
+             x:Name="ToolBar"
              mc:Ignorable="d" 
              >
     <Grid>
@@ -19,7 +20,7 @@
             <RowDefinition Height="1"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1" Grid.Column="1">
-            <ItemsControl ItemsSource="{Binding}"
+            <ItemsControl ItemsSource="{Binding ItemsSource, ElementName=ToolBar}"
                           >
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -27,17 +28,41 @@
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
+
                     <DataTemplate>
-                        <StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <Button Content="+"/>
-                                <Button Content="-"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <CheckBox Content="Visible"/>
-                            </StackPanel>
-                        </StackPanel>
+                        <DockPanel Margin="5">
+
+                            <Button 
+                                    x:Name="Up" 
+                                Tag="{Binding Index}"
+                                    Content="+" 
+                                    Click="Up_Click" 
+                                    Width="50" 
+                                    Height="50"
+                                    Margin="2"/>
+                            <Button 
+                                    x:Name="Down" 
+                                Tag="{Binding Index}"
+                                    Content="-" 
+                                    Click="Down_Click" 
+                                    Width="50" 
+                                    Height="50"
+                                    Margin="2"/>
+
+
+                            <CheckBox 
+                                    x:Name="IsVisivle"  
+                                Tag="{Binding Index}"
+                                IsChecked="True"
+                                    Checked="IsVisivle_Checked" 
+                                    Content="Visible" 
+                                    Width="100" 
+                                    Height="50"
+                                    Margin="2"/>
+
+                        </DockPanel>
                     </DataTemplate>
+
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </StackPanel>

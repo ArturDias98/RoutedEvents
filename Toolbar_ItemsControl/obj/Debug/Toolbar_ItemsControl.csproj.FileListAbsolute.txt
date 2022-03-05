@@ -2,7 +2,6 @@ D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_Ite
 D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_ItemsControl\Toolbar_ItemsControl\bin\Debug\Toolbar_ItemsControl.exe
 D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_ItemsControl\Toolbar_ItemsControl\bin\Debug\Toolbar_ItemsControl.pdb
 D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_ItemsControl\Toolbar_ItemsControl\obj\Debug\Toolbar_ItemsControl.csproj.AssemblyReference.cache
-D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_ItemsControl\Toolbar_ItemsControl\obj\Debug\Toolbar_ItemsControl.csproj.SuggestedBindingRedirects.cache
 D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_ItemsControl\Toolbar_ItemsControl\obj\Debug\Controls\ToolBarControl.g.cs
 D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_ItemsControl\Toolbar_ItemsControl\obj\Debug\MainWindow.g.cs
 D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_ItemsControl\Toolbar_ItemsControl\obj\Debug\App.g.cs
@@ -16,3 +15,4 @@ D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_Ite
 D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_ItemsControl\Toolbar_ItemsControl\obj\Debug\Toolbar_ItemsControl.csproj.CoreCompileInputs.cache
 D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_ItemsControl\Toolbar_ItemsControl\obj\Debug\Toolbar_ItemsControl.exe
 D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_ItemsControl\Toolbar_ItemsControl\obj\Debug\Toolbar_ItemsControl.pdb
+D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_ItemsControl\Toolbar_ItemsControl\obj\Debug\GeneratedInternalTypeHelper.g.cs
