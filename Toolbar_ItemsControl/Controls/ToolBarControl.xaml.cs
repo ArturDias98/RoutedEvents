@@ -71,7 +71,9 @@ namespace Toolbar_ItemsControl.Controls
 
         private void IsVisivle_Checked(object sender, RoutedEventArgs e)
         {
-
+            var obj = sender as CheckBox;
+            var index = (int)obj.Tag;
+            RaiseEvent(new RoutedPropertyChangedEventArgs<int>(0, index, VisibilityChangeEvent));
         }
 
         public ObservableCollection<ToolBarModel> ItemsSource { get; set; }
@@ -105,6 +107,21 @@ namespace Toolbar_ItemsControl.Controls
             }
         }
         public static RoutedEvent ButtonDownEvent = EventManager.RegisterRoutedEvent(nameof(DownClick),
+          RoutingStrategy.Bubble, typeof(RoutedPropertyChangedEventHandler<int>), typeof(ToolBarControl) );
+
+
+        public event RoutedPropertyChangedEventHandler<int>  VisibilityChange
+        {
+            add
+            {
+                AddHandler(VisibilityChangeEvent, value);
+            }
+            remove
+            {
+                RemoveHandler(VisibilityChangeEvent, value);
+            }
+        }
+        public static RoutedEvent VisibilityChangeEvent = EventManager.RegisterRoutedEvent(nameof(VisibilityChange),
           RoutingStrategy.Bubble, typeof(RoutedPropertyChangedEventHandler<int>), typeof(ToolBarControl) );
         #endregion
 

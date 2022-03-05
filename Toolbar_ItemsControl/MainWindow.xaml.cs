@@ -35,12 +35,13 @@ namespace Toolbar_ItemsControl
 
             RigthValue = 0;
             NotifyPropertyChanged(nameof(RigthValue));
+
+            LeftVisibility = true;
+            NotifyPropertyChanged(nameof(LeftVisibility));
+
+            RigthVisibility = true;
+            NotifyPropertyChanged(nameof(RigthVisibility));
         }
-
-        public int LeftValue { get; set; }
-        public int RigthValue { get; set; }
-
-        
 
         private void ToolBarControl_UpClick(object sender, RoutedPropertyChangedEventArgs<int> e)
         {
@@ -50,19 +51,12 @@ namespace Toolbar_ItemsControl
                 LeftValue = LeftValue + 10;
                 NotifyPropertyChanged(nameof(LeftValue));
             }
-            else if (index == 1)
+            else if (index == 1)//Para realmente saber se está interagindo
             {
                 RigthValue = RigthValue + 10;
                 NotifyPropertyChanged(nameof(RigthValue));
             }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void NotifyPropertyChanged([CallerMemberName] string propertyname = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
-        }
-
         private void ToolBarControl_DownClick(object sender, RoutedPropertyChangedEventArgs<int> e)
         {
             var index = e.NewValue;
@@ -71,11 +65,41 @@ namespace Toolbar_ItemsControl
                 LeftValue = LeftValue - 10;
                 NotifyPropertyChanged(nameof(LeftValue));
             }
-            else if (index == 1)
+            else if (index == 1)//Para realmente saber se está interagindo
             {
                 RigthValue = RigthValue - 10;
                 NotifyPropertyChanged(nameof(RigthValue));
             }
         }
+        private void ToolBarControl_VisibilityChange(object sender, RoutedPropertyChangedEventArgs<int> e)
+        {
+            var index = e.NewValue;
+            if (index == 0)
+            {
+                LeftVisibility = !LeftVisibility;
+                NotifyPropertyChanged(nameof(LeftVisibility));
+            }
+            else if (index == 1)//Para realmente saber se está interagindo
+            {
+                RigthVisibility = !RigthVisibility;
+                NotifyPropertyChanged(nameof(RigthVisibility));
+            }
+        }
+        public int LeftValue { get; set; }
+        public int RigthValue { get; set; }
+
+        public bool LeftVisibility { get; set; }
+        public bool RigthVisibility { get; set; }
+
+
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void NotifyPropertyChanged([CallerMemberName] string propertyname = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
+        }
+
+
     }
 }

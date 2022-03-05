@@ -29,6 +29,7 @@
             Grid.Column="1">
             <TextBlock 
                 Text="{Binding LeftValue, ElementName=Main}" 
+                Visibility="{Binding LeftVisibility,ElementName=Main, Converter={StaticResource BooleanToVisibilityConverter}}"
                 Margin="10"
                 Background="LightGray"
                 FontSize="45"
@@ -38,6 +39,7 @@
                 Background="LightGray"
                 FontSize="45"
                 Text="{Binding RigthValue, ElementName=Main}" 
+                Visibility="{Binding RigthVisibility,ElementName=Main, Converter={StaticResource BooleanToVisibilityConverter}}"
                 />
         </DockPanel>
         <toolbar:ToolBarControl 
@@ -45,6 +47,7 @@
             Grid.Row="2" 
             UpClick="ToolBarControl_UpClick"   
             DownClick="ToolBarControl_DownClick"
+            VisibilityChange="ToolBarControl_VisibilityChange"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             NumItems="2"/>

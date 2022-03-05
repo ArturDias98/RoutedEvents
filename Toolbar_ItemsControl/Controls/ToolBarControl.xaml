@@ -55,6 +55,7 @@
                                 Tag="{Binding Index}"
                                 IsChecked="True"
                                     Checked="IsVisivle_Checked" 
+                                Unchecked="IsVisivle_Checked"
                                     Content="Visible" 
                                     Width="100" 
                                     Height="50"

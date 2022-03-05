@@ -16,3 +16,4 @@ D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_Ite
 D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_ItemsControl\Toolbar_ItemsControl\obj\Debug\Toolbar_ItemsControl.exe
 D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_ItemsControl\Toolbar_ItemsControl\obj\Debug\Toolbar_ItemsControl.pdb
 D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_ItemsControl\Toolbar_ItemsControl\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Artur Dias\Documents\Projetos\My Controls\Toolbar - Items Control\Toolbar_ItemsControl\Toolbar_ItemsControl\obj\Debug\App.baml
